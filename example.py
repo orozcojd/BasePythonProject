@@ -1,10 +1,11 @@
-from math import factorial
-import time
-import os
 import math
-import urllib3
+import os
+import time
+from math import factorial
 from time import sleep
 
+import numpy as np
+import urllib3
 
 n_experiments = 10000
 heads_count = np.random.binomial(5, 0.5, n_experiments)
@@ -22,11 +23,14 @@ print(event_prob)
 
 def n_choose_k(n, k):
     numerator = factorial(n) / (factorial(k) * factorial((n - k)))
+
     return numerator / (2**n)
 
+
 def main():
-  pass
+
+    pass
 
 
 if __name__ == "__main__":
-  main()
+    main()

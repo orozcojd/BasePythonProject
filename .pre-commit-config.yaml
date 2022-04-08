@@ -1,21 +1,24 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
     hooks:
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
--   repo: https://github.com/psf/black
-    rev: 21.12b0
-    hooks:
-    -   id: black
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
 
--   repo: https://github.com/pycqa/flake8
-    rev: ''  # pick a git hash / tag to point to
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
     hooks:
-    -   id: flake8
+      - id: black
 
--   repo: https://github.com/timothycrosley/isort
-    rev: 4.3.21
+  - repo: https://github.com/pycqa/flake8
+    rev: 4.0.1 # pick a git hash / tag to point to
     hooks:
-    -   id: isort
+      - id: flake8
+  - repo: https://github.com/pycqa/isort # official isort pre-commit hook
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        name: isort (python)
+
+  # run pre-commit install when cloning repo
