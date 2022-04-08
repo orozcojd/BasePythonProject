@@ -15,6 +15,8 @@ repos:
     rev: 4.0.1 # pick a git hash / tag to point to
     hooks:
       - id: flake8
+
+  # standard library imports, third-party library imports, imports from your own project, etc.
   - repo: https://github.com/pycqa/isort # official isort pre-commit hook
     rev: 5.10.1
     hooks:

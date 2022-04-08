@@ -2,6 +2,7 @@ import math
 import os
 import time
 from math import factorial
+from os import path, sep
 from time import sleep
 
 import numpy as np
@@ -22,6 +23,7 @@ print(event_prob)
 
 
 def n_choose_k(n, k):
+
     numerator = factorial(n) / (factorial(k) * factorial((n - k)))
 
     return numerator / (2**n)
